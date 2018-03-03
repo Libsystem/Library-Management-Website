@@ -1,0 +1,146 @@
+/* Style Sheet for the website */
+div.header
+{
+	background-color:#761919;
+	border: 1px solid black;
+	min-width:600px;
+	margin: 0px 0px 0px 0px;
+	text-align: center;
+	padding-left:20px;
+
+}	 
+
+div.header h3
+{
+	font-style:italic;
+}
+
+div.search
+{
+	text-align: right;
+	padding-bottom:10px;
+	padding-right: 50px;
+}
+
+.input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width */
+input[type=text]:focus {
+    width: 30%;
+}
+
+ul.menu
+{
+	width:1000px;
+	margin-top:0px;
+	margin-left:250px;
+	margin-right:auto;
+	margin-bottom:0px;
+	padding-top: 20px;
+	padding-bottom:7px; 
+	
+}
+ul.menu li
+{
+	
+	display:inline; /* displays the menu inline horiziontally*/
+}
+
+ul.menu li a
+{
+	background-color:#761919;
+	color:white;
+	padding: 10px 20px;
+	text-decoration: none;
+	
+}
+ul.menu li a:hover
+{
+	background-color:#2479c7; /* color of menu links when hovering over */
+}
+
+ul.menu li a.active {
+    background-color: #1a3854; /* Add a color to the "active/current" link */
+    color: white;
+}
+
+body
+{
+	margin: 0px 40px 0px 40px;
+	background-color:#404040 ;
+	min-width: 600px;
+	
+}
+
+div.body
+{
+	background-color:#FFFFFF;
+	border: 1px solid black;
+	text-align: left;
+	clear:both;
+	width:60%;
+	margin-top:0px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:0px;
+	padding: 5px 10px;
+	word-wrap:break-word;
+	
+}
+
+div.footer
+{
+	background-color:black;
+	width:60%;
+	margin-top:0px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:0px;
+	border:1px solid black;
+	color:white;
+	padding: 5px 10px;
+}
+
+
+ /* The sidebar menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #761919; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #111;
+    display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+} 
