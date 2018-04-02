@@ -13,13 +13,38 @@
 	<div class="header">
 		<h1>Library Management System</h1>
 	</div>
+	
+	<!-- Search Form -->
+	<fieldset>
+	<form action="search.php" method="POST">
+		<input id ="search" name="search" type="text" placeholder="Search...">
+		<input id="submit" type="submit" value="Search">
+		<?php 
+			while($row = $result->fetch_assoc()){	
+		?>
+			<p><?php echo $row['title']; ?></p>
+		<?php
+			}
+		?>
+	</form>
+	</fieldset>
+	
+	<section class="background left-column">
+            <h2>Books in the Library</h2>
+            <?php
+                // write out the team table
+                ReadBooks();
+            ?>
+        </section>
+	
+	
 <!--Navigation Menu -->
 	<div class="sidenav">
 	<a href="index.html">Home</a>
 	<a href="browse.html">Browse</a>
 	<a href="about_us.html">About</a>
 	<a href="register.html">Register</a>
-	<a href="book_add.html">Add Book</a>
+	<a href="add_book_form.php">Add Book</a>
 	</div>
 
 <!--Footer-->
@@ -28,6 +53,3 @@
 	</div>
 </body>
 </html>
-<script>
-	includeHTML("index.html");
-</script>
