@@ -12,39 +12,29 @@
 	
 	<div class="header">
 		<h1>Library Management System</h1>
-	</div>
-	
-	<!-- Search Form -->
-	<fieldset>
-	<form action="search.php" method="POST">
-		<input id ="search" name="search" type="text" placeholder="Search...">
-		<input id="submit" type="submit" value="Search">
-		<?php 
-			while($row = $result->fetch_assoc()){	
-		?>
-			<p><?php echo $row['title']; ?></p>
-		<?php
-			}
-		?>
-	</form>
-	</fieldset>
-	
-	<section class="background left-column">
-            <h2>Books in the Library</h2>
-            <?php
-                // write out the team table
-                ReadBooks();
-            ?>
-        </section>
-	
-	
+        </div>
+
+        <h2>Search Books</h2>
+
+        <!-- add the form code starting here -->
+            <form name="data-input" action="title_search_complete.php" method="POST">
+                <p>Title: <input name="title" type="text" required="true" /></p>
+                <p><button type="submit">Search Title</button></p>
+            </form>
+
+        <!-- add the form code starting here -->
+            <form name="data-input" action="author_search_complete.php" method="POST">
+                <p>Author Last Name: <input name="author" type="text" required="true" /></p>
+                <p><button type="submit">Search Author</button></p>
+            </form>
+
 <!--Navigation Menu -->
 	<div class="sidenav">
 	<a href="index.html">Home</a>
 	<a href="browse.html">Browse</a>
 	<a href="about_us.html">About</a>
 	<a href="register.html">Register</a>
-	<a href="add_book_form.php">Add Book</a>
+	<a href="add_book_form.php">Librarian Access</a>
 	</div>
 
 <!--Footer-->
@@ -53,3 +43,6 @@
 	</div>
 </body>
 </html>
+<script>
+	includeHTML("index.html");
+</script>

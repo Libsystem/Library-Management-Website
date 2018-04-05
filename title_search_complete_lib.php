@@ -1,38 +1,35 @@
-<<!DOCTYPE html>
-<html>
-
+<?php
+    require "search_book.inc";
+?>
 <!-- header -->
 <head>
 	<link href="libraryStyle.css" type="text/css" rel="stylesheet">
  
 <title> Library management website </title>
 </head>
-	<div class="body">
+        <div class = "body">
 <body>
-
-	<div class="header">
+        <div class="header">
 		<h1>Library Management System</h1>
 	</div>
-	
-	<p1><b>Hours of Operation:</b><br/><br/></p1>
-	<p1><b>Monday - Thursday:</b> 7:30am - 11pm<br/><p1>
-	<p1><b>Friday:</b> 7:30am - 4pm<br/><p1>
-	<p1><b>Saturday:</b> 10am - 5pm<br/><p1>
-	<p1><b>Sunday:</b> 2pm - 11pm<br/><p1>
-	
+
+<?php
+    // call the insert function
+    SearchBookTitle();
+?>
 <!--Navigation Menu -->
 	<div class="sidenav">
 	<a href="index.html">Home</a>
 	<a href="browse.html">Browse</a>
 	<a href="about_us.html">About</a>
 	<a href="register.html">Register</a>
-	<a href="add_book_form.php">Add Book</a>
+	<a href="add_book_form.php">Librarian Access</a>
 
 	</div>
-
+<a href="add_book_form.php">Return to Librarian Access</a>
 <!--Footer-->
 	<div class=\"footer\">
 		<p>Comp305 - Database Application Development. </p>
 	</div>
+        </div>
 </body>
-</html>

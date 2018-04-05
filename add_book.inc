@@ -100,7 +100,7 @@ function InsertNewBook()
         echo "<p>Something to insert</p>\n";
 
         // write out the data sent
-        echo "<p>POST data sent:</p>\n";
+        echo "<p>You data has been sent:</p>\n";
 
         // loop through the post data
         //      foreach will loop through associative arrays.
@@ -143,7 +143,7 @@ function InsertNewBook()
     else
     {
         // error message
-        echo "<p>Error with insert</p>\n";
+        echo "<p class=\"confirmation\">Error with insert</p>\n";
     }  
 
     // close the connection

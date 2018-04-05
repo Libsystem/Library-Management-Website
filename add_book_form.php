@@ -7,28 +7,42 @@
 ?>
 <!DOCTYPE html>
 <html>
+<!-- header -->
 <head>
     <meta charset="UTF-8">
-    <title>Librarian Access</title>
-    <link href="Lab.15.css" type="text/css" rel="Stylesheet" />
+	<link href="libraryStyle.css" type="text/css" rel="stylesheet">
+ 
+<title> Library management website </title>
 </head>
+	<div class="body">
 <body>
-    <h1>Insert New Books</h2>
-    
+
+	<div class="header">
+		<h1>Library Management System</h1>
+	</div>
     <!-- main section used for formatting -->
     <section class="main">
         <!-- section that contains the data -->
         <section class="background left-column">
-            <h2>Books in the Library</h2>
             <?php
                 // write out the team table
-                ReadBooks();
+                //ReadBooks();
             ?>
         </section>
 
         <!-- section that will include the form -->
         <section class="background right-column">
-            <h2>Add Another Book</h2>
+            <h2>Add Another Book or Search Books</h2>
+
+        <!--Navigation Menu -->
+	<div class="sidenav">
+	<a href="index.html">Home</a>
+	<a href="browse.html">Browse</a>
+	<a href="about_us.html">About</a>
+	<a href="register.html">Register</a>
+	<a href="add_book_form.php">Librarian Access</a>
+
+	</div>
 
             <!-- add the form code starting here -->
             <form name="data-input" action="add_book_insert.php" method="POST">
@@ -46,8 +60,26 @@
                 <p><button type="submit">Insert Data</button></p>
             </form>
 
+            <h2>Search Books</h2>
+
+            <!-- add the form code starting here -->
+            <form name="data-input" action="title_search_complete_lib.php" method="POST">
+                <p>Title: <input name="title" type="text" required="true" /></p>
+                <p><button type="submit">Search Title</button></p>
+            </form>
+
+            <!-- add the form code starting here -->
+            <form name="data-input" action="author_search_complete_lib.php" method="POST">
+                <p>Author Last Name: <input name="author" type="text" required="true" /></p>
+                <p><button type="submit">Search Author</button></p>
+            </form>
+
         </section>
     </section>
+<!--Footer-->
+	<div class=\"footer\">
+		<p>Comp305 - Database Application Development. </p>
+	</div>
 </body>
 </html>    
 

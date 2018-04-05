@@ -144,3 +144,9 @@ div.footer
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 } 
+
+p.confirmation
+{
+    font-weight: "bold";
+    font-style: "underline";
+}
