@@ -18,7 +18,7 @@
 		<h1>Library Management System</h1>
 	</div>
 	
-	<form name="register" action="" method="POST">
+	<form name="register" action="create_account.php" method="POST">
 		<p>Username: <input name="username" type="text" required="true" /></p>
 		<p> Password: <input name="password" type="text" required="true" /></p>
 		<p><button type="submit">Create Account</button></p>
@@ -29,7 +29,7 @@
 	<a href="index.html">Home</a>
 	<a href="browse.php">Browse</a>
 	<a href="about_us.html">About</a>
-	<a href="register.html">Register</a>
+	<a href="register.php">Register</a>
 	<a href="add_book_form.php">Librarian Access</a>
 	</div>
 

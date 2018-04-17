@@ -1,6 +1,7 @@
 <?php
     require "add_book.inc";
 ?>
+
 <!-- header -->
 <head>
 	<link href="libraryStyle.css" type="text/css" rel="stylesheet">
@@ -15,7 +16,7 @@
 
 <?php
     // call the insert function
-    InsertNewBook();
+    CreateAccount();
 ?>
 <!--Navigation Menu -->
 	<div class="sidenav">

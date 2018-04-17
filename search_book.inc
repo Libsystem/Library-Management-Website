@@ -60,9 +60,10 @@ function SearchBookTitle()
         echo "<p>Nothing to insert</p>\n";
     }
         // build the insert sql
-    $SQL = "select book_id, isbn, publisher, status, title, year_published from books where title =";
+    $SQL = "select book_id, isbn, publisher, status, title, year_published from books where title LIKE ";
     $SQL .= "\"".$_POST['title']."\"";
     $SQL .= ";";
+
 
     // execute the insert
     $Results = $Connection->query( $SQL );

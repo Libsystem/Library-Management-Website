@@ -37,9 +37,9 @@
         <!--Navigation Menu -->
 	<div class="sidenav">
 	<a href="index.html">Home</a>
-	<a href="browse.html">Browse</a>
+	<a href="browse.php">Browse</a>
 	<a href="about_us.html">About</a>
-	<a href="register.html">Register</a>
+	<a href="register.php">Register</a>
 	<a href="add_book_form.php">Librarian Access</a>
 
 	</div>

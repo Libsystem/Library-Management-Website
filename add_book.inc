@@ -185,4 +185,55 @@ function DatabaseConnect()
     
 }
 
+function CreateAccount()
+{
+    // connect to the database
+    $Connection = DatabaseConnect();
+    // check to see if something was sent via POST
+    if ( isset( $_POST["username"] ))
+    {
+        // post data has been sent
+        echo "<p>Something to insert</p>\n";
+
+        // write out the data sent
+        echo "<p>Your data has been sent:</p>\n";
+
+        // loop through the post data
+        foreach( $_POST as $Key => $Value )
+        {
+            // echo out the result
+            echo "<p>".$Key.": ".$Value."</p>\n";
+        }
+    }
+    else
+    {
+        // no post data notify the user
+        echo "<p>Nothing to insert</p>\n";
+    }
+        // build the insert sql
+    $SQL = "insert into users(username, password) value (";
+    $SQL .= "\"".$_POST['username']."\"";
+    $SQL .= ",\"".$_POST['password']."\"";
+    $SQL .= ");";
+
+    // execute the insert
+    $Results = $Connection->query( $SQL );
+
+    // check for success
+    if ( $Results )
+    {
+        // success message
+        echo "<p>Successfully inserted</p>\n";
+    }
+    else
+    {
+        // error message
+        echo "<p class=\"confirmation\">Error with insert</p>\n";
+    }  
+
+    // close the connection
+    $Connection->close();
+}
+
+
 ?>
