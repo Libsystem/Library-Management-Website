@@ -15,7 +15,7 @@
 
 <?php
     // call the insert function
-    SearchBookAuthor();
+    SearchBookGenre();
 ?>
 <!--Navigation Menu -->
 	<div class="sidenav">
@@ -26,7 +26,7 @@
 	<a href="add_book_form.php">Librarian Access</a>
 
 	</div>
-<a href="browse.html">Return to Main Page</a>
+<a href="browse.php">Return to Main Page</a>
 <!--Footer-->
 	<div class=\"footer\">
 		<p>Comp305 - Database Application Development. </p>

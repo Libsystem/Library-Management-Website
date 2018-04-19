@@ -138,6 +138,119 @@ function SearchBookTitle()
 
 
 
+
+
+
+
+
+
+
+
+
+
+function SearchBookGenre()
+{
+    // connect to the database
+    $Connection = DatabaseConnect();
+    // check to see if something was send via POST
+    if ( isset( $_POST["genre"] ))
+    {
+        // loop through the post data
+        //      foreach will loop through associative arrays.
+        //      the $Key => $Value expression is how you
+        //      get the key and value pairs from an associative
+        //      array. for example, if $_POST["first-name"] = "Bill"
+        //      $Key will be set to "first-name" and $Value will be
+        //      set to "Bill".
+        foreach( $_POST as $Key => $Value )
+        {
+            // echo out the result
+            echo "<p>".$Key.": ".$Value."</p>\n";
+        }
+       
+    }
+    else
+    {
+        // no post data notify the user
+    }
+        // build the insert sql
+    $SQL = "select book_id, isbn, publisher, status, title, year_published from books where genre LIKE ";
+    $SQL .= "\"".$_POST['genre']."\"";
+    $SQL .= ";";
+
+
+    // execute the insert
+    $Results = $Connection->query( $SQL );
+
+    // check for results
+    //      $Results will evaluate to true if there data is returned
+    //      from the database, false if no data is returned
+    if ( $Results )
+    {
+        // start the table HTML
+        echo "<table>\n";
+
+        // add the HTML for a table header row
+        echo "   <thead>\n";
+        echo "      <th>Book ID</th>\n";
+        echo "      <th>ISBN</th>\n";
+        echo "      <th>Publisher</th>\n";
+        echo "      <th>Status</th>\n";
+        echo "      <th>Title</th>\n";
+        echo "      <th>Year Published</th>\n";
+        echo "   </thead>\n";
+
+        // loop through the results
+        //      the fecth_row method returns an array of the column
+        //      data - one item in the array for each column in the
+        //      select statement.
+        //
+        //      the statement in the while will evaluate to false when
+        //      there are no more rows
+        while( $Row = $Results->fetch_row() )
+        {
+            // add  table row
+            echo "   <tr>\n";
+
+            // loop through the items in the array
+            //      the count function returns the number of items
+            //      in the array.
+            for( $i=0; $i<count($Row); $i++ )
+            {
+                // center align the first cell on each row
+                if (( $i == 0 ) || ( $i == 1 ) || ( $i == 4 ))
+                {
+                    // add a centered cell
+                    echo "     <td class=\"centered\">";
+                }
+                else
+                {
+                    // add left justified cell
+                    echo "     <td>";
+                }
+
+                // add the rest of the cell
+                echo $Row[$i]."</td>\n";
+            }
+
+            // end of the table row
+            echo "   </tr>\n";
+        }
+        
+        // stop the table HTML
+        echo "</table>\n";
+    }
+    else
+    {
+        // no results returned
+        echo "<p>No results returned from the query</p>\n";
+    }
+
+    // close the connection
+    $Connection->close();
+}
+
+
     // insert data
 function SearchBookAuthor()
 {
