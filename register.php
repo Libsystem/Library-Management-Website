@@ -19,6 +19,13 @@
 	</div>
 	
 	<form name="register" action="create_account.php" method="POST">
+		<p> Student ID: <input name="student_id" type="text" required="true" /></p>
+		<p> First Name: <input name="fname" type="text" required="true" /></p>
+		<p> Last Name: <input name="lname" type="text" required="true" /></p>
+		<p> Phone: <input name="Phone" type="text" required="true" /></p>
+		<p> Date of Birth: <input name="dob" type="date" required="true" /></p>
+		<p> Academic Year: <input name="academic_year" type="text" required="true" /></p>
+		<p> Email: <input name="email" type="text" required="true" /></p>
 		<p>Username: <input name="username" type="text" required="true" /></p>
 		<p> Password: <input name="password" type="text" required="true" /></p>
 		<p><button type="submit">Create Account</button></p>
