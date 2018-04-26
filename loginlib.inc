@@ -26,7 +26,7 @@ function DatabaseConnect()
     return $Connection;
     
 }
-function LoginUser()
+function LoginLib()
 {
     // connect to the database
     $conn = DatabaseConnect();
@@ -40,7 +40,7 @@ function LoginUser()
     //echo "<p> $pswd </p>";   
 
    
- $sql = "SELECT user_name, pass_word FROM students where user_name = '$user' and pass_word = '$pswd'";
+$sql = "SELECT lib_name, pass_word FROM librarians where user_name = '$user' and pass_word = '$pswd'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) 
@@ -56,7 +56,6 @@ function LoginUser()
         {
             return false;
         }
-	
 	
 
 }

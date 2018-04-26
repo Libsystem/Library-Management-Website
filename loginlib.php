@@ -1,6 +1,6 @@
 <?php
-require "loginuser.inc";
-LogInUser();
+require "loginlib.inc";
+LogInLib();
 ?>
 
 <<!DOCTYPE html>
